@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -169,10 +168,10 @@
     </footer>
 
     <div class="mobile-bar">
-        <a href="tel:+919876543210" class="bar-btn btn-call">
+        <a href="tel:+918506989134" class="bar-btn btn-call">
             <i class="fas fa-phone-alt"></i> Call Now
         </a>
-        <a href="https://wa.me/919876543210" class="bar-btn btn-wa">
+        <a href="https://wa.me/918506989134" class="bar-btn btn-wa">
             <i class="fab fa-whatsapp"></i> WhatsApp
         </a>
     </div>
