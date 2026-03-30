@@ -165,6 +165,71 @@
             window.location.href = finalUrl;
         });
     </script>
+<div id="custom-popup-overlay">
+    <div id="custom-popup-box">
+        <span id="close-popup">&times;</span>
+        <div class="popup-content">
+            <div class="phone-icon">
+                <svg viewBox="0 0 24 24" width="50" height="50" fill="#B22222"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+            </div>
+            <h2>Need Help?</h2>
+            <p>Consult with Court Marriage Experts Now!</p>
+            <a href="tel:+919999999999" class="call-btn">CALL NOW</a>
+            <p id="timer-text">Closing in <span id="seconds">5</span>s...</p>
+        </div>
+    </div>
+</div>
 
+<style>
+/* Background Overlay */
+#custom-popup-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7); display: flex; align-items: center;
+    justify-content: center; z-index: 10000; font-family: sans-serif;
+}
+/* Popup Box */
+#custom-popup-box {
+    background: #f0f0f0; padding: 30px; border-radius: 15px;
+    width: 90%; max-width: 400px; text-align: center;
+    position: relative; border: 4px solid #FFD700;
+}
+#close-popup {
+    position: absolute; right: 15px; top: 10px; font-size: 24px;
+    cursor: pointer; color: #333;
+}
+.popup-content h2 { color: #002D62; margin: 10px 0; font-size: 24px; }
+.popup-content p { color: #333; font-weight: bold; margin-bottom: 20px; }
+/* Call Button */
+.call-btn {
+    display: inline-block; background: #B22222; color: white;
+    padding: 12px 40px; text-decoration: none; border-radius: 25px;
+    font-weight: bold; font-size: 20px; transition: 0.3s;
+}
+.call-btn:hover { background: #8B0000; transform: scale(1.05); }
+#timer-text { font-size: 14px; color: #666; margin-top: 15px; }
+</style>
+
+<script>
+    let timeLeft = 5;
+    const timerElement = document.getElementById('seconds');
+    
+    // Countdown logic
+    const countdown = setInterval(() => {
+        timeLeft--;
+        timerElement.innerText = timeLeft;
+        if (timeLeft <= 0) {
+            clearInterval(countdown);
+            closePopup();
+        }
+    }, 1000);
+
+    // Close function
+    function closePopup() {
+        document.getElementById('custom-popup-overlay').style.display = 'none';
+    }
+
+    // Close on 'X' click
+    document.getElementById('close-popup').onclick = closePopup;
+</script>
 </body>
 </html>
