@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe & Legal Court Marriage - 24 Hours Service</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS for Styling */
+        body { margin: 0; font-family: 'Roboto', sans-serif; background-color: #f4f7f6; color: #333; padding-bottom: 70px; /* Space for sticky bar */ }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: #2c3e50; }
+
+        /* Header & Navigation */
+        header { background-color: white; padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 24px; font-weight: bold; color: #2c3e50; text-decoration: none; }
+        .contact-top { color: #d4af37; font-weight: bold; text-decoration: none; font-size: 18px; }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; padding: 100px 20px; text-align: center; color: white; }
+        .hero h1 { color: white; font-size: 48px; margin-bottom: 10px; }
+        .hero p { font-size: 20px; margin-bottom: 30px; }
+
+        /* General Container */
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        
+        /* Services Section */
+        .services { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+        .service-card { background: white; padding: 30px; border-radius: 8px; width: 280px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center; border-bottom: 4px solid #d4af37; transition: transform 0.2s; }
+        .service-card:hover { transform: translateY(-5px); }
+
+        /* Documents Table */
+        .doc-section { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-top: 40px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { text-align: left; padding: 15px; border-bottom: 1px solid #eee; }
+        th { background-color: #f8fcfb; }
+
+        /* Floating Contact Bar - 100% Working on GitHub */
+        .floating-bar { position: fixed; bottom: 0; left: 0; width: 100%; display: flex; z-index: 999999; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); }
+        .floating-bar a { flex: 1; text-align: center; padding: 18px; text-decoration: none; color: white; font-weight: bold; font-size: 18px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .btn-call { background-color: #d4af37; /* Golden */ border-right: 1px solid rgba(255,255,255,0.3); }
+        .btn-call:hover { background-color: #b8962d; }
+        .btn-whatsapp { background-color: #25d366; /* Green */ }
+        .btn-whatsapp:hover { background-color: #1ebe57; }
+
+        /* Responsive */
+        @media (max-width: 768px) { .hero h1 { font-size: 32px; } .hero p { font-size: 16px; } header { padding: 15px 20px; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">⚖️ Legal Marriage</a>
+        <a href="tel:+919999999999" class="contact-top">📞 +91 99999-99999</a>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Safe & Legal Court Marriage</h1>
+            <p>100% Legally Valid Marriage Certificate. Hassle-Free Process.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <h2 style="text-align: center;">Our Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>Court Marriage</h3>
+                <p>Register your marriage under Special Marriage Act with complete legal safety.</p>
+            </div>
+            <div class="service-card">
+                <h3>Arya Samaj</h3>
+                <p>Traditional Vedic marriage with immediate valid registration.</p>
+            </div>
+            <div class="service-card">
+                <h3>Registration</h3>
+                <p>Already married? Get your marriage registered legally within 24 hours.</p>
+            </div>
+        </div>
+
+        <div class="doc-section">
+            <h2>Required Documents Checklist</h2>
+            <p>Make sure you have these documents ready for a smooth process.</p>
+            <table>
+                <tr>
+                    <th>Document Type</th>
+                    <th>Bride/Groom (Each)</th>
+                    <th>2 Witnesses (Each)</th>
+                </tr>
+                <tr>
+                    <td><b>Age Proof</b></td>
+                    <td>Birth Certificate / 10th Pass Certificate</td>
+                    <td>Aadhar Card (Must be 18+)</td>
+                </tr>
+                <tr>
+                    <td><b>Address Proof</b></td>
+                    <td>Aadhar Card / Voter ID / Passport</td>
+                    <td>Voter ID / Driving License</td>
+                </tr>
+                <tr>
+                    <td><b>Photos</b></td>
+                    <td>6 Passport Size Photos (Latest)</td>
+                    <td>2 Passport Size Photos</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="floating-bar">
+        <a href="tel:+919999999999" class="btn-call">
+            <span>📞</span> Call Now
+        </a>
+        <a href="https://wa.me/919999999999" class="btn-whatsapp">
+            <span>💬</span> WhatsApp
+        </a>
+    </div>
+
+</body>
+</html>
