@@ -9,54 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
-/* MOBILE REVIEW FIX */
-.review-section {
-    padding: 20px 15px;
-    background: #f9f9f9;
-}
-
-.review-title {
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 1.3rem;
-}
-
-.review-container {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.review-card {
-    display: flex;
-    gap: 10px;
-    background: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    align-items: flex-start;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-}
-
-.review-card img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-}
-
-.review-card h4 {
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-}
-
-.review-card p {
-    font-size: 0.85rem;
-    color: #555;
-}
-
-.badge {
-    color: #27ae60;
-    font-size: 0.75rem;
-}
 /* GRID DESIGN */
 .marriage-grid {
     display: grid;
@@ -171,49 +123,6 @@
             <a href="#appointment" style="background: #f1c40f; color:#000; padding: 15px 35px; border-radius: 50px; text-decoration:none; font-weight:bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(241,196,15,0.4);">Consult an Expert Now</a>
         </div>
     </section>
-<!-- SIMPLE MOBILE REVIEW START -->
-<div class="review-section">
-
-    <h2 class="review-title">⭐ 4.8 (9864 Reviews)</h2>
-
-    <div class="review-container">
-
-        <div class="review-card">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg">
-            <div>
-                <h4>Rahul Sharma <span class="badge">✔ Verified</span></h4>
-                <p>2 din me court marriage complete ho gaya. Fast & trusted service 👍</p>
-            </div>
-        </div>
-
-        <div class="review-card">
-            <img src="https://randomuser.me/api/portraits/women/44.jpg">
-            <div>
-                <h4>Neha Verma <span class="badge">✔ Verified</span></h4>
-                <p>Very smooth process, staff supportive tha. Highly recommended.</p>
-            </div>
-        </div>
-
-        <div class="review-card">
-            <img src="https://randomuser.me/api/portraits/men/55.jpg">
-            <div>
-                <h4>Imran Khan <span class="badge">✔ Verified</span></h4>
-                <p>Documents + witness sab arrange kar diya. Genuine service.</p>
-            </div>
-        </div>
-
-        <div class="review-card">
-            <img src="https://randomuser.me/api/portraits/men/76.jpg">
-            <div>
-                <h4>Gurpreet Singh <span class="badge">✔ Verified</span></h4>
-                <p>Marriage certificate time pe mil gaya. Best consultant 👍</p>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-<!-- SIMPLE MOBILE REVIEW END -->
 <!-- MARRIAGE GRID START -->
 <div class="marriage-grid">
 
@@ -301,7 +210,49 @@
             </form>
         </div>
     </div>
+<!-- SIMPLE MOBILE REVIEW START -->
+<div class="review-section">
 
+    <h2 class="review-title">⭐ 4.8 (9864 Reviews)</h2>
+
+    <div class="review-container">
+
+        <div class="review-card">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg">
+            <div>
+                <h4>Rahul Sharma <span class="badge">✔ Verified</span></h4>
+                <p>2 din me court marriage complete ho gaya. Fast & trusted service 👍</p>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg">
+            <div>
+                <h4>Neha Verma <span class="badge">✔ Verified</span></h4>
+                <p>Very smooth process, staff supportive tha. Highly recommended.</p>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <img src="https://randomuser.me/api/portraits/men/55.jpg">
+            <div>
+                <h4>Imran Khan <span class="badge">✔ Verified</span></h4>
+                <p>Documents + witness sab arrange kar diya. Genuine service.</p>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <img src="https://randomuser.me/api/portraits/men/76.jpg">
+            <div>
+                <h4>Gurpreet Singh <span class="badge">✔ Verified</span></h4>
+                <p>Marriage certificate time pe mil gaya. Best consultant 👍</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- SIMPLE MOBILE REVIEW END -->
     <div class="office-info">
         <p><strong><i class="fas fa-map-marker-alt"></i> Office Address:</strong></p>
         <p>Near Metro Station Tis Hazari Court, Delhi-110054</p>
@@ -369,6 +320,54 @@
 </div>
 
 <style>
+/* MOBILE REVIEW FIX */
+.review-section {
+    padding: 20px 15px;
+    background: #f9f9f9;
+}
+
+.review-title {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.review-card {
+    display: flex;
+    gap: 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: flex-start;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.review-card img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.review-card h4 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.review-card p {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.badge {
+    color: #27ae60;
+    font-size: 0.75rem;
+}
 /* Background Overlay */
 #expert-popup-wrapper {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
