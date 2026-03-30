@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -78,6 +77,41 @@
             <a href="#appointment" style="background: #f1c40f; color:#000; padding: 15px 35px; border-radius: 50px; text-decoration:none; font-weight:bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(241,196,15,0.4);">Consult an Expert Now</a>
         </div>
     </section>
+<!-- MARRIAGE TYPES GRID START -->
+<div class="marriage-grid">
+
+    <div class="marriage-card">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552">
+        <p>Court Marriage</p>
+    </div>
+
+    <div class="marriage-card">
+        <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866">
+        <p>Hindu Marriage</p>
+    </div>
+
+    <div class="marriage-card">
+        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a">
+        <p>Muslim Nikah</p>
+    </div>
+
+    <div class="marriage-card">
+        <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff">
+        <p>Sikh Anand Karaj</p>
+    </div>
+
+    <div class="marriage-card">
+        <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da">
+        <p>Love Marriage</p>
+    </div>
+
+    <div class="marriage-card">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486">
+        <p>Inter Caste Marriage</p>
+    </div>
+
+</div>
+<!-- MARRIAGE TYPES GRID END -->
 
     <div class="section">
         <h2 class="section-title">Our Marriage Services</h2>
@@ -192,6 +226,40 @@
 </div>
 
 <style>
+/* MARRIAGE GRID */
+.marriage-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.marriage-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.marriage-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.marriage-card p {
+    padding: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Desktop pe 3 column */
+@media(min-width: 768px){
+    .marriage-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 /* Background Overlay */
 #expert-popup-wrapper {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
