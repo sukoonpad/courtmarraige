@@ -9,6 +9,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
+/* MOBILE REVIEW FIX */
+.review-section {
+    padding: 20px 15px;
+    background: #f9f9f9;
+}
+
+.review-title {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.review-card {
+    display: flex;
+    gap: 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: flex-start;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.review-card img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.review-card h4 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.review-card p {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.badge {
+    color: #27ae60;
+    font-size: 0.75rem;
+}
 /* GRID DESIGN */
 .marriage-grid {
     display: grid;
@@ -122,24 +170,19 @@
             <p>100% Valid Marriage Certificate | Fast & Confidential</p>
             <a href="#appointment" style="background: #f1c40f; color:#000; padding: 15px 35px; border-radius: 50px; text-decoration:none; font-weight:bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(241,196,15,0.4);">Consult an Expert Now</a>
         </div>
-<!-- REVIEW SECTION START -->
+    </section>
+<!-- SIMPLE MOBILE REVIEW START -->
 <div class="review-section">
 
-    <div class="review-header">
-        <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png">
-        <div>
-            <h2>4.8 ⭐⭐⭐⭐⭐</h2>
-            <p>9864 Google Reviews</p>
-        </div>
-    </div>
+    <h2 class="review-title">⭐ 4.8 (9864 Reviews)</h2>
 
-    <div class="review-slider">
+    <div class="review-container">
 
         <div class="review-card">
             <img src="https://randomuser.me/api/portraits/men/32.jpg">
             <div>
                 <h4>Rahul Sharma <span class="badge">✔ Verified</span></h4>
-                <p>“2 din me court marriage ho gaya, very fast service 👍”</p>
+                <p>2 din me court marriage complete ho gaya. Fast & trusted service 👍</p>
             </div>
         </div>
 
@@ -147,7 +190,7 @@
             <img src="https://randomuser.me/api/portraits/women/44.jpg">
             <div>
                 <h4>Neha Verma <span class="badge">✔ Verified</span></h4>
-                <p>“Best consultant in Delhi, smooth process & no tension.”</p>
+                <p>Very smooth process, staff supportive tha. Highly recommended.</p>
             </div>
         </div>
 
@@ -155,7 +198,7 @@
             <img src="https://randomuser.me/api/portraits/men/55.jpg">
             <div>
                 <h4>Imran Khan <span class="badge">✔ Verified</span></h4>
-                <p>“Documents + witness sab arrange kar diya, trusted service.”</p>
+                <p>Documents + witness sab arrange kar diya. Genuine service.</p>
             </div>
         </div>
 
@@ -163,15 +206,14 @@
             <img src="https://randomuser.me/api/portraits/men/76.jpg">
             <div>
                 <h4>Gurpreet Singh <span class="badge">✔ Verified</span></h4>
-                <p>“Certificate time pe mil gaya, highly recommended 🙏”</p>
+                <p>Marriage certificate time pe mil gaya. Best consultant 👍</p>
             </div>
         </div>
 
     </div>
 
 </div>
-<!-- REVIEW SECTION END -->
-    </section>
+<!-- SIMPLE MOBILE REVIEW END -->
 <!-- MARRIAGE GRID START -->
 <div class="marriage-grid">
 
@@ -327,85 +369,6 @@
 </div>
 
 <style>
-/* REVIEW SECTION */
-.review-section {
-    padding: 25px 15px;
-    background: #f8f8f8;
-}
-
-.review-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.review-header img {
-    width: 40px;
-}
-
-.review-header h2 {
-    margin: 0;
-    font-size: 1.3rem;
-}
-
-.review-header p {
-    font-size: 0.9rem;
-    color: #666;
-}
-
-/* AUTO SCROLL */
-.review-slider {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    animation: scrollReviews 10s linear infinite;
-}
-
-@keyframes scrollReviews {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-50%); }
-}
-
-/* CARD */
-.review-card {
-    display: flex;
-    gap: 10px;
-    background: #fff;
-    padding: 12px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.review-card img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-}
-
-.review-card h4 {
-    font-size: 0.9rem;
-}
-
-.review-card p {
-    font-size: 0.85rem;
-    color: #555;
-}
-
-/* VERIFIED BADGE */
-.badge {
-    color: #27ae60;
-    font-size: 0.75rem;
-}
-
-/* Desktop center */
-@media(min-width:768px){
-    .review-section {
-        max-width: 600px;
-        margin: auto;
-    }
-}
 /* Background Overlay */
 #expert-popup-wrapper {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
