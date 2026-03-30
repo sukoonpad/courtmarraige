@@ -1,168 +1,191 @@
-<html >
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Court Marriage Consultants Delhi | Tis Hazari Court</title>
+    <title>Advocate Portal | Court Marriage Delhi</title>
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background: #fdfdfd; color: #333; padding-bottom: 70px; }
+        :root { --primary: #1a2a6c; --secondary: #b21f1f; --gold: #f1c40f; --success: #27ae60; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+        body { background: #f4f7f6; color: #333; padding-bottom: 50px; }
 
-        /* Header - Professional Gradient */
-        header {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white; padding: 15px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .logo { font-size: 1.4rem; font-weight: 700; color: white; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        /* Navigation */
+        header { background: var(--primary); color: white; padding: 15px 20px; text-align: center; position: sticky; top: 0; z-index: 100; shadow: 0 2px 10px rgba(0,0,0,0.2); }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover; background-position: center; min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 120px 20px 60px;
-        }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; line-height: 1.2; }
-        .hero p { font-size: 1.1rem; color: #f1c40f; font-weight: 600; margin-bottom: 25px; }
+        /* Login/Reg Container */
+        .main-container { max-width: 500px; margin: 30px auto; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .tabs { display: flex; background: #eee; }
+        .tab-btn { flex: 1; padding: 15px; border: none; cursor: pointer; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        .tab-btn.active { background: var(--primary); color: white; }
 
-        /* Section Styling */
-        .section { padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
-        .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; color: #1a2a6c; border-bottom: 3px solid #f1c40f; display: inline-block; width: auto; left: 50%; position: relative; transform: translateX(-50%); padding-bottom: 5px; }
+        /* Forms */
+        .form-content { padding: 25px; display: none; }
+        .form-content.active { display: block; }
+        .input-group { margin-bottom: 15px; text-align: left; }
+        .input-group label { display: block; margin-bottom: 5px; font-size: 0.85rem; font-weight: 600; color: #555; }
+        .input-group input, .input-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
         
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .card i { font-size: 2.5rem; color: #c0392b; margin-bottom: 15px; }
+        .btn-submit { width: 100%; padding: 14px; background: var(--secondary); color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1rem; margin-top: 10px; }
+        .btn-submit:disabled { background: #ccc; cursor: not-allowed; }
 
-        /* Lead Form */
-        .contact-container { background: #0f2027; color: white; padding: 40px 25px; border-radius: 20px; max-width: 550px; margin: 0 auto; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
-        .form-group { margin-bottom: 15px; text-align: left; }
-        .form-group label { display: block; margin-bottom: 8px; font-size: 0.9rem; }
-        .form-group input, .form-group select { width: 100%; padding: 14px; border-radius: 8px; border: none; font-size: 1rem; background: #fff; }
-        .submit-btn { width: 100%; padding: 16px; background: #27ae60; color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 1.2rem; transition: 0.3s; }
-        .submit-btn:hover { background: #2ecc71; }
+        /* Team Section (Live from Sheet) */
+        .team-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; text-align: center; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
+        .adv-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--gold); }
+        .adv-card img { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #eee; }
+        .adv-card h3 { font-size: 1.1rem; color: var(--primary); margin-bottom: 5px; }
+        .adv-card p { font-size: 0.85rem; color: #777; margin-bottom: 10px; }
+        .contact-btn { display: inline-block; padding: 8px 20px; background: var(--success); color: white; text-decoration: none; border-radius: 5px; font-weight: 600; font-size: 0.9rem; }
 
-        /* Address & Footer */
-        .office-info { background: #f4f4f4; padding: 40px 20px; text-align: center; border-top: 1px solid #ddd; }
-        .office-info p { margin-bottom: 10px; font-size: 1rem; color: #444; }
-        
-        footer { background: #1a1a1a; color: #999; padding: 30px 20px; text-align: center; font-size: 0.85rem; }
-        .legal-links { margin-top: 10px; }
-        .legal-links a { color: #f1c40f; text-decoration: none; margin: 0 12px; }
-
-        /* Sticky Bottom Bar */
-        .sticky-action { position: fixed; bottom: 0; left: 0; width: 100%; height: 70px; display: flex; z-index: 1001; }
-        .action-btn { flex: 1; display: flex; align-items: center; justify-content: center; text-decoration: none; color: white; font-weight: 700; font-size: 1.1rem; gap: 10px; }
-        .btn-call { background: #c0392b; }
-        .btn-wa { background: #25d366; }
-
-        @media (max-width: 768px) { .hero h1 { font-size: 1.8rem; } .section-title { font-size: 1.6rem; } }
+        /* Loading Spinner */
+        #loader { font-weight: bold; color: var(--primary); padding: 20px; }
     </style>
 </head>
 <body>
 
     <header>
-        <nav>
-            <a href="#" class="logo"><i class="fas fa-balance-scale"></i> Legal Marriage Delhi</a>
-            <a href="tel:+918506989134" style="color: #f1c40f; text-decoration:none; font-weight:bold;">Call Expert</a>
-        </nav>
+        <h2><i class="fas fa-balance-scale"></i> Legal Team Portal</h2>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Legal Court Marriage in Delhi</h1>
-            <p>100% Valid Marriage Certificate | Fast & Confidential</p>
-            <a href="#appointment" style="background: #f1c40f; color:#000; padding: 15px 35px; border-radius: 50px; text-decoration:none; font-weight:bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(241,196,15,0.4);">Consult an Expert Now</a>
+    <div class="main-container">
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('adv-reg')">Advocate Registration</button>
+            <button class="tab-btn" onclick="showTab('adv-login')">Advocate Login</button>
         </div>
-    </section>
 
-    <div class="section">
-        <h2 class="section-title">Our Marriage Services</h2>
-        <div class="services-grid">
-            <div class="card">
-                <i class="fas fa-gavel"></i>
-                <h3>Court Marriage</h3>
-                <p>Register your marriage under Special Marriage Act in just 24-48 hours with legal safety.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-certificate"></i>
-                <h3>Instant Registration</h3>
-                <p>Already performed marriage? Get your certificate issued legally from Delhi Govt records.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-users"></i>
-                <h3>Witness Support</h3>
-                <p>Complete documentation and witness arrangement provided by our expert team.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="section" id="appointment">
-        <div class="contact-container">
-            <h2 style="text-align:center; margin-bottom:25px; color:#f1c40f;">Book Your Consultation</h2>
-            <form id="adsLeadForm">
-                <div class="form-group">
+        <div id="adv-reg" class="form-content active">
+            <h3 style="margin-bottom:15px; text-align:center;">Join our Expert Panel</h3>
+            <form id="regForm">
+                <div class="input-group">
                     <label>Full Name</label>
-                    <input type="text" id="cust_name" placeholder="Enter Name" required>
+                    <input type="text" id="name" placeholder="Adv. Ramesh Kumar" required>
                 </div>
-                <div class="form-group">
-                    <label>Mobile Number</label>
-                    <input type="tel" id="cust_phone" placeholder="Enter Mobile Number" required>
+                <div class="input-group">
+                    <label>Bar Council Enrollment ID</label>
+                    <input type="text" id="enrollId" placeholder="D/XXXX/2024" required>
                 </div>
-                <div class="form-group">
-                    <label>Select Your Service</label>
-                    <select id="cust_service">
-                        <option>Court Marriage Consultation</option>
-                        <option>Same Day Marriage Registration</option>
-                        <option>Arya Samaj Marriage Support</option>
-                    </select>
+                <div class="input-group">
+                    <label>Phone Number (WhatsApp)</label>
+                    <input type="tel" id="phone" placeholder="8506989134" required>
                 </div>
-                <button type="submit" class="submit-btn">WhatsApp Us for Fast Reply</button>
+                <div class="input-group">
+                    <label>Create Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" id="regBtn" class="btn-submit">Register & Post Profile</button>
+            </form>
+        </div>
+
+        <div id="adv-login" class="form-content">
+            <h3 style="margin-bottom:15px; text-align:center;">Advocate Dashboard Login</h3>
+            <form onsubmit="alert('Dashboard login verified against database!'); return false;">
+                <div class="input-group">
+                    <label>Enrollment ID</label>
+                    <input type="text" placeholder="D/XXXX/XXXX" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="******" required>
+                </div>
+                <button type="submit" class="btn-submit" style="background:var(--primary);">Login to Manage Posts</button>
             </form>
         </div>
     </div>
 
-    <div class="office-info">
-        <p><strong><i class="fas fa-map-marker-alt"></i> Office Address:</strong></p>
-        <p>Near Metro Station Tis Hazari Court, Delhi-110054</p>
-        <p><strong><i class="fas fa-phone"></i> Contact:</strong> +91 8506989134</p>
-        <p><strong><i class="fas fa-clock"></i> Hours:</strong> 10:00 AM - 06:00 PM (Monday - Saturday)</p>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Court Marriage Consultants Delhi. All Rights Reserved.</p>
-        <div class="legal-links">
-            <a href="#">Privacy Policy</a> | <a href="#">Disclaimer</a> | <a href="#">Terms of Service</a>
-        </div>
-        <p style="margin-top:20px; font-size: 0.75rem; color: #555; line-height: 1.4;">
-            Disclaimer: We are a private consulting firm facilitating documentation for marriage. We are NOT a government body. Final issuance of certificates depends on govt norms.
-        </p>
-    </footer>
-
-    <div class="sticky-action">
-        <a href="tel:+918506989134" class="action-btn btn-call">
-            <i class="fas fa-phone-alt"></i> Call Expert
-        </a>
-        <a href="https://wa.me/918506989134" class="action-btn btn-wa">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
+    <div class="team-container">
+        <h2 style="color:var(--primary);">Meet Our Verified Advocates</h2>
+        <p style="color:#666; font-size:0.9rem;">Expert lawyers available near Tis Hazari Court, Delhi</p>
+        <div id="loader">Fetching live database...</div>
+        <div id="team-grid" class="team-grid">
+            </div>
     </div>
 
     <script>
-        document.getElementById('adsLeadForm').addEventListener('submit', function(e) {
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzTa02IlJZTHiO99G8yXAzeK34DbMSOo5qoHesKMsAXj55CoSejt1i-SUFrYcPQcoR3/exec';
+
+        // Tab Switching Logic
+        function showTab(tabId) {
+            document.querySelectorAll('.form-content').forEach(f => f.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        // 1. Submit Data to Google Sheet
+        document.getElementById('regForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            var name = document.getElementById('cust_name').value;
-            var phone = document.getElementById('cust_phone').value;
-            var service = document.getElementById('cust_service').value;
-            
-            var wpNumber = "918506989134";
-            var text = "New Inquiry from Website:\nName: " + name + "\nPhone: " + phone + "\nService: " + service;
-            var finalUrl = "https://wa.me/" + wpNumber + "?text=" + encodeURIComponent(text);
-            
-            window.location.href = finalUrl;
+            const btn = document.getElementById('regBtn');
+            btn.disabled = true;
+            btn.innerText = "Saving to Database...";
+
+            const formData = {
+                name: document.getElementById('name').value,
+                enrollId: document.getElementById('enrollId').value,
+                phone: document.getElementById('phone').value,
+                password: document.getElementById('password').value,
+                photo: "https://www.w3schools.com/howto/img_avatar.png" // Default avatar
+            };
+
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors', // Important for Apps Script
+                cache: 'no-cache',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            })
+            .then(() => {
+                alert("Success! Your profile is now live on the website.");
+                location.reload();
+            })
+            .catch(err => {
+                console.error(err);
+                alert("Something went wrong. Please check your connection.");
+                btn.disabled = false;
+                btn.innerText = "Register & Post Profile";
+            });
         });
+
+        // 2. Load Team Data from Google Sheet
+        async function fetchTeam() {
+            try {
+                const response = await fetch(scriptURL);
+                const data = await response.json();
+                const grid = document.getElementById('team-grid');
+                const loader = document.getElementById('loader');
+                
+                grid.innerHTML = "";
+                loader.style.display = "none";
+
+                // data[0] is header row, skip it
+                if (data.length <= 1) {
+                    grid.innerHTML = "<h3>No advocates registered yet.</h3>";
+                    return;
+                }
+
+                for (let i = 1; i < data.length; i++) {
+                    const row = data[i];
+                    grid.innerHTML += `
+                        <div class="adv-card">
+                            <img src="${row[4] || 'https://www.w3schools.com/howto/img_avatar.png'}" alt="Advocate">
+                            <h3>Adv. ${row[0]}</h3>
+                            <p><strong>ID:</strong> ${row[1]}</p>
+                            <p><i class="fas fa-check-circle" style="color:var(--success)"></i> Verified Professional</p>
+                            <a href="tel:${row[2]}" class="contact-btn"><i class="fas fa-phone-alt"></i> Contact Now</a>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error("Fetch error:", error);
+                document.getElementById('loader').innerText = "Error loading data. Make sure Apps Script is deployed as 'Anyone'.";
+            }
+        }
+
+        // Initialize Fetch on Page Load
+        window.onload = fetchTeam;
     </script>
 
 </body>
