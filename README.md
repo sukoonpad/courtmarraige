@@ -165,71 +165,117 @@
             window.location.href = finalUrl;
         });
     </script>
-<div id="custom-popup-overlay">
-    <div id="custom-popup-box">
-        <span id="close-popup">&times;</span>
-        <div class="popup-content">
-            <div class="phone-icon">
-                <svg viewBox="0 0 24 24" width="50" height="50" fill="#B22222"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+<div id="expert-popup-wrapper">
+    <div id="expert-popup-card">
+        <span id="close-btn">&times;</span>
+        
+        <div class="icon-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+        </div>
+
+        <div class="popup-body">
+            <h2>Need Expert Help?</h2>
+            <p>Talk to our Court Marriage Experts for a free consultation.</p>
+            
+            <a href="tel:+918506989134" class="main-call-btn">
+                <span>CALL NOW</span>
+            </a>
+            
+            <div class="timer-bar-container">
+                <div id="timer-progress"></div>
             </div>
-            <h2>Need Help?</h2>
-            <p>Consult with Court Marriage Experts Now!</p>
-            <a href="tel:+919999999999" class="call-btn">CALL NOW</a>
-            <p id="timer-text">Closing in <span id="seconds">5</span>s...</p>
+            <p class="timer-label">Closing in <span id="sec-count">10</span>s</p>
         </div>
     </div>
 </div>
 
 <style>
 /* Background Overlay */
-#custom-popup-overlay {
+#expert-popup-wrapper {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7); display: flex; align-items: center;
-    justify-content: center; z-index: 10000; font-family: sans-serif;
+    background: rgba(0, 0, 0, 0.85); display: flex; align-items: center;
+    justify-content: center; z-index: 99999; font-family: 'Segoe UI', Roboto, sans-serif;
+    backdrop-filter: blur(5px);
 }
-/* Popup Box */
-#custom-popup-box {
-    background: #f0f0f0; padding: 30px; border-radius: 15px;
-    width: 90%; max-width: 400px; text-align: center;
-    position: relative; border: 4px solid #FFD700;
+
+/* Professional Card Design */
+#expert-popup-card {
+    background: #ffffff; width: 90%; max-width: 380px;
+    padding: 40px 25px 25px; border-radius: 20px; text-align: center;
+    position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border-top: 6px solid #b22222; animation: popupSlide 0.4s ease-out;
 }
-#close-popup {
-    position: absolute; right: 15px; top: 10px; font-size: 24px;
-    cursor: pointer; color: #333;
+
+@keyframes popupSlide { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+#close-btn {
+    position: absolute; right: 15px; top: 10px; font-size: 28px;
+    cursor: pointer; color: #999; transition: 0.2s;
 }
-.popup-content h2 { color: #002D62; margin: 10px 0; font-size: 24px; }
-.popup-content p { color: #333; font-weight: bold; margin-bottom: 20px; }
-/* Call Button */
-.call-btn {
-    display: inline-block; background: #B22222; color: white;
-    padding: 12px 40px; text-decoration: none; border-radius: 25px;
-    font-weight: bold; font-size: 20px; transition: 0.3s;
+#close-btn:hover { color: #333; }
+
+/* Icon Styling */
+.icon-circle {
+    width: 70px; height: 70px; background: #fff5f5; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 15px; color: #b22222; border: 2px solid #b22222;
+    animation: pulseIcon 2s infinite;
 }
-.call-btn:hover { background: #8B0000; transform: scale(1.05); }
-#timer-text { font-size: 14px; color: #666; margin-top: 15px; }
+@keyframes pulseIcon { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+.icon-circle svg { width: 35px; height: 35px; }
+
+/* Text Styling */
+#expert-popup-card h2 { color: #1a1a1a; margin: 0 0 10px; font-size: 24px; font-weight: 700; }
+#expert-popup-card p { color: #555; font-size: 15px; line-height: 1.5; margin-bottom: 25px; }
+
+/* Call Button - Premium Look */
+.main-call-btn {
+    display: block; background: linear-gradient(135deg, #b22222 0%, #801a1a 100%);
+    color: white; text-decoration: none; padding: 15px; border-radius: 12px;
+    font-size: 18px; font-weight: bold; letter-spacing: 1px;
+    box-shadow: 0 8px 15px rgba(178, 34, 34, 0.3); transition: 0.3s;
+}
+.main-call-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 20px rgba(178, 34, 34, 0.4); }
+
+/* Progress Bar & Timer */
+.timer-bar-container {
+    width: 100%; height: 4px; background: #eee; border-radius: 2px;
+    margin-top: 25px; overflow: hidden;
+}
+#timer-progress {
+    height: 100%; width: 100%; background: #b22222;
+    transition: width 1s linear;
+}
+.timer-label { font-size: 12px !important; color: #999 !important; margin-top: 8px !important; }
 </style>
 
 <script>
-    let timeLeft = 5;
-    const timerElement = document.getElementById('seconds');
+    let secondsLeft = 10;
+    const countDisplay = document.getElementById('sec-count');
+    const progressBar = document.getElementById('timer-progress');
     
-    // Countdown logic
-    const countdown = setInterval(() => {
-        timeLeft--;
-        timerElement.innerText = timeLeft;
-        if (timeLeft <= 0) {
-            clearInterval(countdown);
-            closePopup();
+    const interval = setInterval(() => {
+        secondsLeft--;
+        countDisplay.innerText = secondsLeft;
+        
+        // Progress bar width update
+        let progressPercent = (secondsLeft / 10) * 100;
+        progressBar.style.width = progressPercent + "%";
+
+        if (secondsLeft <= 0) {
+            clearInterval(interval);
+            removePopup();
         }
     }, 1000);
 
-    // Close function
-    function closePopup() {
-        document.getElementById('custom-popup-overlay').style.display = 'none';
+    function removePopup() {
+        const popup = document.getElementById('expert-popup-wrapper');
+        if(popup) popup.style.display = 'none';
     }
 
-    // Close on 'X' click
-    document.getElementById('close-popup').onclick = closePopup;
+    document.getElementById('close-btn').onclick = removePopup;
 </script>
 </body>
 </html>
