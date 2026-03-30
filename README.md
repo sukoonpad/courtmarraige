@@ -111,14 +111,14 @@
 
     <header>
         <nav>
-            <a href="#" class="logo"><i class="fas fa-balance-scale"></i> Legal Marriage Delhi</a>
+            <a href="#" class="logo"><i class="fas fa-balance-scale"></i> Court Marriage Tis Hazari Delhi</a>
             <a href="tel:+918506989134" style="color: #f1c40f; text-decoration:none; font-weight:bold;">Call Expert</a>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Legal Court Marriage in Delhi</h1>
+            <h1>Court Marriage Tis Hazari Delhi</h1>
             <p>100% Valid Marriage Certificate | Fast & Confidential</p>
             <a href="#appointment" style="background: #f1c40f; color:#000; padding: 15px 35px; border-radius: 50px; text-decoration:none; font-weight:bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(241,196,15,0.4);">Consult an Expert Now</a>
         </div>
