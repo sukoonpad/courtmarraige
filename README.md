@@ -1,180 +1,170 @@
-<html >
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Court Marriage & Registration Services</title>
+    <title>Court Marriage Consultants Delhi | Tis Hazari Court</title>
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; background: #f4f7f6; padding-bottom: 70px; }
+        body { font-family: 'Poppins', sans-serif; background: #fdfdfd; color: #333; padding-bottom: 70px; }
 
-        /* Header */
+        /* Header - Professional Gradient */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white; padding: 15px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        .logo { font-size: 1.4rem; font-weight: 700; text-decoration: none; color: white; display: flex; align-items: center; gap: 10px; }
+        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: white; text-decoration: none; display: flex; align-items: center; gap: 8px; }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80');
-            background-size: cover;
-            background-position: center;
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 100px 20px 60px;
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover; background-position: center; min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 120px 20px 60px;
         }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; line-height: 1.2; }
+        .hero p { font-size: 1.1rem; color: #f1c40f; font-weight: 600; margin-bottom: 25px; }
 
-        .hero-content h1 { font-size: 2.2rem; margin-bottom: 1rem; }
-        .hero-content p { font-size: 1.1rem; margin-bottom: 2rem; }
+        /* Section Styling */
+        .section { padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; color: #1a2a6c; border-bottom: 3px solid #f1c40f; display: inline-block; width: auto; left: 50%; position: relative; transform: translateX(-50%); padding-bottom: 5px; }
+        
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card i { font-size: 2.5rem; color: #c0392b; margin-bottom: 15px; }
 
-        /* Services */
-        .services { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
-        .section-title { text-align: center; margin-bottom: 40px; font-size: 1.8rem; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .service-card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; }
-        .service-icon { font-size: 2.5rem; color: #667eea; margin-bottom: 1rem; }
-
-        /* Documents Mobile View */
-        .documents { padding: 60px 20px; background: #fff; }
-        .doc-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
-        .doc-item { padding: 1.5rem; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #764ba2; }
-
-        /* Contact Form */
-        .contact { background: #764ba2; color: white; padding: 60px 20px; }
-        .contact-form { max-width: 500px; margin: 20px auto; background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; backdrop-filter: blur(5px); }
+        /* Lead Form */
+        .contact-container { background: #0f2027; color: white; padding: 40px 25px; border-radius: 20px; max-width: 550px; margin: 0 auto; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
         .form-group { margin-bottom: 15px; text-align: left; }
-        .form-group label { display: block; margin-bottom: 5px; }
-        .form-group input, .form-group select { width: 100%; padding: 12px; border-radius: 8px; border: none; }
-        .submit-btn { width: 100%; padding: 15px; background: #ff6b6b; color: white; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; }
+        .form-group label { display: block; margin-bottom: 8px; font-size: 0.9rem; }
+        .form-group input, .form-group select { width: 100%; padding: 14px; border-radius: 8px; border: none; font-size: 1rem; background: #fff; }
+        .submit-btn { width: 100%; padding: 16px; background: #27ae60; color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 1.2rem; transition: 0.3s; }
+        .submit-btn:hover { background: #2ecc71; }
 
-        /* 🔥 MOBILE FLOATING BAR (Sticky) */
-        .mobile-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 65px;
-            display: flex;
-            z-index: 9999;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
-        }
-        .bar-btn {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            font-size: 1rem;
-            gap: 8px;
-        }
-        .btn-call { background: #d4af37; }
+        /* Address & Footer */
+        .office-info { background: #f4f4f4; padding: 40px 20px; text-align: center; border-top: 1px solid #ddd; }
+        .office-info p { margin-bottom: 10px; font-size: 1rem; color: #444; }
+        
+        footer { background: #1a1a1a; color: #999; padding: 30px 20px; text-align: center; font-size: 0.85rem; }
+        .legal-links { margin-top: 10px; }
+        .legal-links a { color: #f1c40f; text-decoration: none; margin: 0 12px; }
+
+        /* Sticky Bottom Bar */
+        .sticky-action { position: fixed; bottom: 0; left: 0; width: 100%; height: 70px; display: flex; z-index: 1001; }
+        .action-btn { flex: 1; display: flex; align-items: center; justify-content: center; text-decoration: none; color: white; font-weight: 700; font-size: 1.1rem; gap: 10px; }
+        .btn-call { background: #c0392b; }
         .btn-wa { background: #25d366; }
 
-        /* Navigation Hide for Mobile */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero-content h1 { font-size: 1.8rem; }
-        }
+        @media (max-width: 768px) { .hero h1 { font-size: 1.8rem; } .section-title { font-size: 1.6rem; } }
     </style>
 </head>
 <body>
 
     <header>
         <nav>
-            <a href="#" class="logo"><i class="fas fa-balance-scale"></i> CourtMarriage.in</a>
-            <div style="font-size: 1.5rem;"><i class="fas fa-bars"></i></div>
+            <a href="#" class="logo"><i class="fas fa-balance-scale"></i> Legal Marriage Delhi</a>
+            <a href="tel:+918506989134" style="color: #f1c40f; text-decoration:none; font-weight:bold;">Call Expert</a>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Fast & Legal Court Marriage</h1>
-            <p>Get married in 24-48 hours. 100% Confidential & Legal.</p>
-            <a href="#contact" style="background: #ff6b6b; color:white; padding: 12px 25px; border-radius: 50px; text-decoration:none; font-weight:bold;">Book Now</a>
+            <h1>Legal Court Marriage in Delhi</h1>
+            <p>100% Valid Marriage Certificate | Fast & Confidential</p>
+            <a href="#appointment" style="background: #f1c40f; color:#000; padding: 15px 35px; border-radius: 50px; text-decoration:none; font-weight:bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(241,196,15,0.4);">Consult an Expert Now</a>
         </div>
     </section>
 
-    <section class="services">
-        <h2 class="section-title">Our Services</h2>
+    <div class="section">
+        <h2 class="section-title">Our Marriage Services</h2>
         <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-gavel service-icon"></i>
+            <div class="card">
+                <i class="fas fa-gavel"></i>
                 <h3>Court Marriage</h3>
-                <p>Marriage registration within 24 hours under Special Marriage Act.</p>
+                <p>Register your marriage under Special Marriage Act in just 24-48 hours with legal safety.</p>
             </div>
-            <div class="service-card">
-                <i class="fas fa-certificate service-icon"></i>
-                <h3>Registration</h3>
-                <p>Already married? Get your legal certificate issued easily.</p>
+            <div class="card">
+                <i class="fas fa-certificate"></i>
+                <h3>Instant Registration</h3>
+                <p>Already performed marriage? Get your certificate issued legally from Delhi Govt records.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <h3>Witness Support</h3>
+                <p>Complete documentation and witness arrangement provided by our expert team.</p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="documents">
-        <h2 class="section-title">Required Documents</h2>
-        <div class="doc-grid">
-            <div class="doc-item"><strong>1. Age Proof:</strong> 10th Certificate / Passport</div>
-            <div class="doc-item"><strong>2. ID Proof:</strong> Aadhar Card / PAN Card</div>
-            <div class="doc-item"><strong>3. Witness:</strong> 2 Witnesses with ID Proof</div>
+    <div class="section" id="appointment">
+        <div class="contact-container">
+            <h2 style="text-align:center; margin-bottom:25px; color:#f1c40f;">Book Your Consultation</h2>
+            <form id="adsLeadForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="cust_name" placeholder="Enter Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" id="cust_phone" placeholder="Enter Mobile Number" required>
+                </div>
+                <div class="form-group">
+                    <label>Select Your Service</label>
+                    <select id="cust_service">
+                        <option>Court Marriage Consultation</option>
+                        <option>Same Day Marriage Registration</option>
+                        <option>Arya Samaj Marriage Support</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">WhatsApp Us for Fast Reply</button>
+            </form>
         </div>
-    </section>
+    </div>
 
-    <section id="contact" class="contact">
-        <h2 class="section-title">Get Free Consultation</h2>
-        <form class="contact-form" onsubmit="alert('Thank you! We will call you back.'); return false;">
-            <div class="form-group">
-                <label>Phone Number</label>
-                <input type="tel" placeholder="Enter your mobile number" required>
-            </div>
-            <div class="form-group">
-                <label>Service</label>
-                <select>
-                    <option>Court Marriage</option>
-                    <option>Marriage Registration</option>
-                </select>
-            </div>
-            <button class="submit-btn">Consult Now</button>
-        </form>
-    </section>
+    <div class="office-info">
+        <p><strong><i class="fas fa-map-marker-alt"></i> Office Address:</strong></p>
+        <p>Near Metro Station Tis Hazari Court, Delhi-110054</p>
+        <p><strong><i class="fas fa-phone"></i> Contact:</strong> +91 8506989134</p>
+        <p><strong><i class="fas fa-clock"></i> Hours:</strong> 10:00 AM - 06:00 PM (Monday - Saturday)</p>
+    </div>
 
     <footer>
-        <p style="text-align: center; padding: 20px; background: #333; color: white;">&copy; 2026 CourtMarriage.in</p>
+        <p>&copy; 2026 Court Marriage Consultants Delhi. All Rights Reserved.</p>
+        <div class="legal-links">
+            <a href="#">Privacy Policy</a> | <a href="#">Disclaimer</a> | <a href="#">Terms of Service</a>
+        </div>
+        <p style="margin-top:20px; font-size: 0.75rem; color: #555; line-height: 1.4;">
+            Disclaimer: We are a private consulting firm facilitating documentation for marriage. We are NOT a government body. Final issuance of certificates depends on govt norms.
+        </p>
     </footer>
 
-    <div class="mobile-bar">
-        <a href="tel:+918506989134" class="bar-btn btn-call">
-            <i class="fas fa-phone-alt"></i> Call Now
+    <div class="sticky-action">
+        <a href="tel:+918506989134" class="action-btn btn-call">
+            <i class="fas fa-phone-alt"></i> Call Expert
         </a>
-        <a href="https://wa.me/918506989134" class="bar-btn btn-wa">
+        <a href="https://wa.me/918506989134" class="action-btn btn-wa">
             <i class="fab fa-whatsapp"></i> WhatsApp
         </a>
     </div>
+
+    <script>
+        document.getElementById('adsLeadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var name = document.getElementById('cust_name').value;
+            var phone = document.getElementById('cust_phone').value;
+            var service = document.getElementById('cust_service').value;
+            
+            var wpNumber = "918506989134";
+            var text = "New Inquiry from Website:\nName: " + name + "\nPhone: " + phone + "\nService: " + service;
+            var finalUrl = "https://wa.me/" + wpNumber + "?text=" + encodeURIComponent(text);
+            
+            window.location.href = finalUrl;
+        });
+    </script>
 
 </body>
 </html>
