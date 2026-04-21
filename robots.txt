@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://courtmarriagedelhi.in/sitemap.xml
+
+# Block admin or private areas if any
+Disallow: /admin/
+Disallow: /private/
